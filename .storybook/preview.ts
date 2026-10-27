@@ -1,7 +1,5 @@
 import type { Preview } from '@storybook/angular-vite';
-import '../tokens/build/base.css';
-import '../tokens/build/light.css';
-import '../tokens/build/dark.css';
+import '../src/styles.css';
 
 const preview: Preview = {
   parameters: {
