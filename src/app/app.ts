@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ChatPanel } from './assistant/chat-panel/chat-panel';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ChatPanel],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('help-center');
-}
+export class App {}
