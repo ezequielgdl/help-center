@@ -46,3 +46,6 @@ Thumbs.db
 # Project docs (not meant to ship with the app)
 CLAUDE.md
 SPEC.md
+
+*storybook.log
+storybook-static
