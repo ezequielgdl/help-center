@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../tokens/build/base.css';
+@import '../tokens/build/light.css';
+@import '../tokens/build/dark.css';
+
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text-default);
+  font-size: var(--font-size-md);
+}

@@ -1,4 +1,7 @@
 import type { Preview } from '@storybook/angular-vite';
+import '../tokens/build/base.css';
+import '../tokens/build/light.css';
+import '../tokens/build/dark.css';
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +19,32 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+
+  globalTypes: {
+    theme: {
+      description: 'Theme (light/dark token set)',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', icon: 'sun', title: 'Light' },
+          { value: 'dark', icon: 'moon', title: 'Dark' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+
+  initialGlobals: {
+    theme: 'light',
+  },
+
+  decorators: [
+    (story, context) => {
+      document.documentElement.setAttribute('data-theme', context.globals['theme']);
+      return story();
+    },
+  ],
 };
 
 export default preview;
